@@ -35,8 +35,8 @@ static void print_init_header(const char *warning_msg) {
 
 static const char *TAG = "BIOS Flasher";
 
-#define WIFI_SSID "ChinaNet-XfQxgA"
-#define WIFI_PASS "dthy4324"
+#define WIFI_SSID "你的网络名称"
+#define WIFI_PASS "你的网络密码"
 
 // HTTP 流式写入处理器 - 边接收边写SPI Flash
 static esp_err_t stream_write_handler(httpd_req_t *req) {
