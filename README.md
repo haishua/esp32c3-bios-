@@ -1,12 +1,15 @@
 # ESP32C3 BIOS 刷写器
 
-基于 ESP32C3 的 SPI Flash 刷写工具，支持通过 HTTP 进行 BIOS 的备份、刷写和验证操作。
+基于 ESP32C3 的 SPI Flash 刷写工具，支持通过 HTTP 进行 BIOS 的备份、刷写和验证操作
+用于临时刷写电脑的bios文件
+没有前端，直接用curl命令来流备份和写入
+
 
 ## 功能
 
-BIOS 备份** - 通过 HTTP 下载 SPI Flash 内容
-BIOS 刷写** - 通过 HTTP 上传并写入 SPI Flash
-BIOS 验证** - 对比上传文件与 Flash 内容
+**BIOS 备份** - 通过 HTTP 下载 SPI Flash 内容
+**BIOS 刷写** - 通过 HTTP 上传并写入 SPI Flash
+**BIOS 验证** - 对比上传文件与 Flash 内容
 
 
 ## 硬件连接
@@ -19,8 +22,10 @@ BIOS 验证** - 对比上传文件与 Flash 内容
 | GPIO12 (CS)  | CS#           |
 | 3.3V         | VCC, WP#, HOLD# |
 | GND          | GND           |
-也可以自己在spi_flash.c里改
 
+
+
+> 也可以自己在spi_flash.c里改
 > 注意：请使用 SOIC 夹子或正确焊接 BIOS 芯片，仅使用 3.3V 电压！
 
 ## 软件配置
